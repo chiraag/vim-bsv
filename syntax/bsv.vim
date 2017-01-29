@@ -122,19 +122,19 @@ highlight link bsvAttributes SpecialComment
 highlight link bsvSystemTask Function
 
 " we need the conceal feature (vim ≥ 7.3)
-if !has('conceal') || &enc != 'utf-8' || &diff
-    finish
-endif
+" if !has('conceal') || &enc != 'utf-8' || &diff
+"     finish
+" endif
 
-syntax match bsvNiceOperator "!=" conceal cchar=≠
-syntax match bsvNiceOperator "==" conceal cchar=≡
-syntax match bsvNiceOperator "<-" conceal cchar=←
-syntax match bsvNiceOperator "&\@<!&&&\@!" conceal cchar=∧
-syntax match bsvNiceOperator "||" conceal cchar=∨
-syntax match bsvNiceOperator "<<" conceal cchar=≪
-syntax match bsvNiceOperator ">>" conceal cchar=≫
-syntax match bsvNiceOperator ">=" conceal cchar=≥
-syntax match bsvNiceOperator "<=" conceal cchar=⇐
+" syntax match bsvNiceOperator "!=" conceal cchar=≠
+" syntax match bsvNiceOperator "==" conceal cchar=≡
+" syntax match bsvNiceOperator "<-" conceal cchar=←
+" syntax match bsvNiceOperator "&\@<!&&&\@!" conceal cchar=∧
+" syntax match bsvNiceOperator "||" conceal cchar=∨
+" syntax match bsvNiceOperator "<<" conceal cchar=≪
+" syntax match bsvNiceOperator ">>" conceal cchar=≫
+" syntax match bsvNiceOperator ">=" conceal cchar=≥
+" syntax match bsvNiceOperator "<=" conceal cchar=⇐
 " Register write is more common than check for less-equal.
 " In the worst case, replace x <= a by a >= x or !(x > a).
 
